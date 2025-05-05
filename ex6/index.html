@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercise6</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em 2em;
+      border-bottom: 1px solid #ddd;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .nav-links, .user-actions {
+      display: flex;
+      gap: 1em;
+    }
+    .join-btn {
+      background-color: black;
+      color: white;
+      padding: 0.5em 1em;
+      border: none;
+      border-radius: 20px;
+    }
+    .hero-section {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .hero-text, .hero-img {
+      flex: 1 1 50%;
+      padding: 2em;
+      text-align: center;
+    }
+    .hero-text {
+      background-color: #524256;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero-text h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+    .hero-text p {
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+    .hero-text button {
+      padding: 0.5em 1em;
+      border: 1px solid white;
+      background: transparent;
+      color: white;
+      border-radius: 5px;
+    }
+    .promo-section {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .promo-box {
+      flex: 1 1 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2em;
+      text-align: center;
+      gap: 1em;
+    }
+    .promo1 { background-color: #b8cbb8; }
+    .promo2 { background-color: #5b4434; color: white; }
+    .promo-box button {
+      margin-top: 1em;
+      padding: 0.5em 1em;
+      border: 1px solid currentColor;
+      background: transparent;
+      border-radius: 5px;
+      color: inherit;
+    }
+    footer {
+      background-color: #f1f1f1;
+      padding: 2em;
+    }
+    .footer-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+    }
+    .footer-columns div {
+      flex: 1 1 200px;
+    }
+    .footer-bottom {
+      margin-top: 2em;
+      font-size: 0.8em;
+      color: #666;
+    }
+    @media screen and (max-width: 550px) {
+      .hero-section, .promo-section, .footer-columns {
+        flex-direction: column;
+      }
+      .hero-text, .hero-img, .promo-box {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">Logo</div>
+  <nav class="nav-links">
+    <a href="#">Menu</a>
+    <a href="#">Rewards</a>
+    <a href="#">Gift Cards</a>
+  </nav>
+  <div class="user-actions">
+    <a href="#">Find a store</a>
+    <a href="#">Sign in</a>
+    <button class="join-btn">Join now</button>
+  </div>
+</header>
+
+<section class="hero-section">
+  <div class="hero-text">
+    <h1>The Spring Edit</h1>
+    <p>Fresh flavors, familiar joy.</p>
+    <button>View the menu</button>
+  </div>
+  <div class="hero-img">
+    <img src="src/matcha.jpg" alt="Spring Drinks" style="width:100%; height:auto;">
+  </div>
+</section>
+
+<section class="promo-section">
+  <div class="promo-box promo1">
+    <img src="src/americano.jpg" alt="Free Drink" style="width:100%; height:auto;">
+    <h2>It starts with free</h2>
+    <p>Enjoy a free handcrafted drink when you make a qualifying purchase during your first week as an AAA® Rewards member.*</p>
+    <button>Join now</button>
+  </div>
+  <div class="promo-box promo2">
+    <img src="src/coldfoam.jpg" alt="Nondairy Drink" style="width:100%; height:auto;">
+    <h2>Nondairy milk, no extra charge</h2>
+    <p>Customize your drink with your favorite nondairy milk—like soy, coconut, almond or oat—for no additional charge.</p>
+    <button>Order now</button>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-columns">
+    <div><strong>About Us</strong><br>Our Company<br>Our Coffee<br>Contact Us</div>
+    <div><strong>Careers</strong><br>Culture and Values<br>College Plan<br>U.S. Careers</div>
+    <div><strong>Social Impact</strong><br>Communities<br>Foundation<br>Sustainability</div>
+    <div><strong>For Business</strong><br>Support Center<br>Suppliers<br>Corporate Sales</div>
+    <div><strong>Order and Pick Up</strong><br>Order on App<br>Delivery<br>Pick Up Options</div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 AAA Company. All rights reserved.
+  </div>
+</footer>
+</body>
+</html>
