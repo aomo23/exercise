@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="src/main.js" defer></script>
+  </head>
+  <body class="bg-black flex items-center justify-center min-h-screen">
+  <div class="w-80 bg-black p-4 rounded-lg shadow-xl">
+    <!-- Expression -->
+    <div id="expression" class="text-right text-gray-400 text-lg px-2"> </div>
+    <!-- Result -->
+    <div id="display" class="text-right text-white text-5xl mb-4 px-2 py-4 break-words min-h-[72px]">0</div>
+
+    <div class="grid grid-cols-4 gap-3 text-xl font-bold">
+      <button class="bg-gray-400 text-black h-16 w-16 rounded-full" onclick="clearDisplay()">C</button>
+      <button class="bg-gray-400 text-black h-16 w-16 rounded-full" onclick="toggleSign()">±</button>
+      <button class="bg-gray-400 text-black h-16 w-16 rounded-full" onclick="percentage()">%</button>
+      <button class="bg-orange-500 text-white h-16 w-16 rounded-full" onclick="inputOperator('/')">÷</button>
+
+      <button class="bg-gray-700 text-white h-16 w-16 rounded-full" onclick="inputDigit('7')">7</button>
+      <button class="bg-gray-700 text-white h-16 w-16 rounded-full" onclick="inputDigit('8')">8</button>
+      <button class="bg-gray-700 text-white h-16 w-16 rounded-full" onclick="inputDigit('9')">9</button>
+      <button class="bg-orange-500 text-white h-16 w-16 rounded-full" onclick="inputOperator('*')">×</button>
+
+      <button class="bg-gray-700 text-white h-16 w-16 rounded-full" onclick="inputDigit('4')">4</button>
+      <button class="bg-gray-700 text-white h-16 w-16 rounded-full" onclick="inputDigit('5')">5</button>
+      <button class="bg-gray-700 text-white h-16 w-16 rounded-full" onclick="inputDigit('6')">6</button>
+      <button class="bg-orange-500 text-white h-16 w-16 rounded-full" onclick="inputOperator('-')">−</button>
+
+      <button class="bg-gray-700 text-white h-16 w-16 rounded-full" onclick="inputDigit('1')">1</button>
+      <button class="bg-gray-700 text-white h-16 w-16 rounded-full" onclick="inputDigit('2')">2</button>
+      <button class="bg-gray-700 text-white h-16 w-16 rounded-full" onclick="inputDigit('3')">3</button>
+      <button class="bg-orange-500 text-white h-16 w-16 rounded-full" onclick="inputOperator('+')">+</button>
+
+      <button class="col-span-2 bg-gray-700 text-white h-16 rounded-full flex justify-center items-center" onclick="inputDigit('0')">0</button>
+      <button class="bg-gray-700 text-white h-16 w-16 rounded-full" onclick="inputDecimal()">.</button>
+      <button class="bg-orange-500 text-white h-16 w-16 rounded-full" onclick="calculate()">=</button>
+    </div>
+  </div>
+  </body>
+</html>
